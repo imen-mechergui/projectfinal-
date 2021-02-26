@@ -1,0 +1,23 @@
+.navbar img{
+    height: 100px;
+}
+.navbar-nav li a {
+    color: #1714c5 !important;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-right:1.5rem;
+}
+.navbar-nav li a:hover {
+    color: #0d25aa;
+}
+.btn-custom{
+    width: 134px;
+    height: 45px;
+    background: #252b5f;
+    border-radius: 5px;
+    color: #e43535;
+}
+
+.navbar{
+    background: #98a7f3;
+}

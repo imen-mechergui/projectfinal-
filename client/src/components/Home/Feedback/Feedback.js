@@ -1,0 +1,43 @@
+import React, { useEffect, useState } from 'react';
+import Spinner from '../../Spinner/Spinner';
+import './Feedback.css'
+
+const Feedback = () => {
+    const [feedback, setFeedback] = useState([])
+    useEffect(() => {
+        fetch('https://infinite-headland-81835.herokuapp.com/getAllReviews')
+            .then(res => res.json())
+            .then(result => setFeedback(result))
+    }, [])
+    return (
+        <section className="review my-5 py-3" >
+            <div className="review-wrapper container">
+                <h2 className="text-center my-3 mb-5"> Clients <span >  Feedback</span></h2>
+                <div className="row" >
+
+                    {feedback.length ?
+
+                        feedback.map(info => <div key={info.name} className="col-sm-12 col-md-6 col-lg-4 mt-5">
+                            <div className="card card-service-custom   p-4" >
+                                <div className="client-img d-flex " >
+                                   
+                                    <div className="mt-4 font-weight-bold" >
+                                        <a href="/"> <h4>{info.company}</h4></a>
+                                    </div>
+                                </div>
+                                <div className="review-text">
+                                    <p className="text-center" >{info.discretion}</p>
+                                </div>
+                            </div>
+                        </div>)
+                        : <Spinner />
+
+                    }
+
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Feedback;

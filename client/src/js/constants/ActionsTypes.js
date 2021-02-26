@@ -1,0 +1,14 @@
+export const USER_LOADING="USER_LODING";
+export const LOGIN_USER="LOGIN_USER";
+export const REGISTER_USER="REGISTER_USER";
+export const LOGOUT_USER="LOGOUT_USER";
+export const GET_AUTH_USER="GET_AUTH_USER";
+export const AUTH_ERRORS="AUTH_ERRORS";
+export const ARTICLE_USER="ARTICLE_USER";
+export const PROFILE_USER="PROFILE_USER";
+ export const ADD_COMMENT="ADD_COMMENT";
+
+export const GET_ALL_USERS="GET_ALL_USERS";
+export const REMOVE_COMMENT="REMOVE_COMMENT";
+export const GET_PROFILE="GET_PROFILE";
+export const GET_ALL_PROFILES = "GET_ALL_PROFILES";
